@@ -3,6 +3,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/a11y-webtesting/', // must match your repo name
+  base: '/a11y_webtesting/', // must match your repo name
   plugins: [react()],
 });
