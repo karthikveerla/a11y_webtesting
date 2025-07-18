@@ -9,7 +9,7 @@ const SemanticSimpleTable = () => (
         aria-label="Employee performance table"
       >
         <caption className="caption-top text-left text-gray-700 font-semibold mb-2">
-          Employee Performance Q1
+          Product Sales
         </caption>
         <thead className="bg-gray-200">
           <tr>
