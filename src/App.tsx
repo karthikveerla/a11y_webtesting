@@ -8,13 +8,13 @@ import GridTable from './pages/GridTable';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
+    <div className="min-h-screen flex flex-col bg-gray-90 text-gray-900">
       <header className="bg-blue-600 text-white p-4 shadow-md">
         <div className="container mx-auto text-xl font-semibold">Accessibility Testing Ground</div>
       </header>
 
-      <div className="flex flex-grow">
-        <nav className="w-64 bg-white border-r p-6 shadow-md">
+      <div className="flex flex-grow  bg-gray-200">
+        <nav className="w-64 border-r p-6 shadow-md">
           <h2 className="text-lg font-bold mb-4">Test Pages</h2>
           <ul className="space-y-3">
             <li><Link className="text-blue-600 hover:underline" to="/semantic-simple">Semantic Simple Table</Link></li>
