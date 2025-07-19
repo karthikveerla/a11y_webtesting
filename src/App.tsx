@@ -4,6 +4,7 @@ import SemanticSimpleTable from './pages/SemanticSimpleTable';
 import SemanticComplexTable from './pages/SemanticComplexTable';
 import LayoutTable from './pages/LayoutTable';
 import GridTable from './pages/GridTable';
+import SampleTable from './pages/sampleTable';
 
 function App() {
   return (
@@ -20,15 +21,18 @@ function App() {
             <li><Link className="text-blue-600 hover:underline" to="/semantic-complex">Semantic Complex Table</Link></li>
             <li><Link className="text-blue-600 hover:underline" to="/layout-table">Layout Table</Link></li>
             <li><Link className="text-blue-600 hover:underline" to="/grid-table">Grid Table</Link></li>
+            <li><Link className="text-blue-600 hover:underline" to="/sample-table">Sample Table</Link></li>
           </ul>
         </nav>
 
         <main className="flex-grow p-8">
           <Routes>
+
             <Route path="/semantic-simple" element={<SemanticSimpleTable />} />
             <Route path="/semantic-complex" element={<SemanticComplexTable />} />
             <Route path="/layout-table" element={<LayoutTable />} />
             <Route path="/grid-table" element={<GridTable />} />
+            <Route path="/sample-table" element={<SampleTable />} />
           </Routes>
         </main>
       </div>
