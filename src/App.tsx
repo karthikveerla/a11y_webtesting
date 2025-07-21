@@ -4,7 +4,7 @@ import SemanticSimpleTable from './pages/SemanticSimpleTable';
 import SemanticComplexTable from './pages/SemanticComplexTable';
 import LayoutTable from './pages/LayoutTable';
 import GridTable from './pages/GridTable';
-import SampleTable from './pages/sampleTable';
+import SampleTable from './pages/SampleTable';
 
 function App() {
   return (
