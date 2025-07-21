@@ -1,4 +1,4 @@
-const SampleTable = () => (
+const TestingTable = () => (
   <div className="space-y-8">
     {/* Table 1: Employee Performance */}
     <div className="bg-white rounded-xl shadow-md p-6 border border-gray-300">
@@ -49,4 +49,4 @@ const SampleTable = () => (
   </div>
 );
 
-export default SampleTable;
+export default TestingTable;
