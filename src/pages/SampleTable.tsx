@@ -4,7 +4,6 @@ const SampleTable = () => (
     <div className="bg-white rounded-xl shadow-md p-6 border border-gray-300">
       <h1 className="text-2xl font-bold mb-4">Semantic Simple Table</h1>
       <table
-        role="presentation"
         id="semanticTable"
         className="table-auto border-2 border-black w-full"
         aria-label="Employee performance table"
