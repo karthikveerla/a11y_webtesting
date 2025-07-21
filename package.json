@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://karthikveerla.github.io/a11y_testing",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
