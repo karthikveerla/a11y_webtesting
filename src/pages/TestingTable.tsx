@@ -39,13 +39,13 @@ const TestingTable = () => (
     {/* Image Between Tables */}
     <div className="flex justify-center">
       <img
-        src="/a11y_webtesting/tablesnip.png"
+        src="tablesnip.png"
         alt="Accessibility Overview"
         className="rounded-lg shadow-lg border max-w-full h-auto"
       />
     </div>
 
-
+    
   </div>
 );
 
