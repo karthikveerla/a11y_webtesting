@@ -1,9 +1,14 @@
 const TestingTable = () => (
   <div className="space-y-10 p-6 bg-gray-50 text-gray-800">
+
     {/* 1. Standard Table with Caption */}
-    <section>
+    <section id="section-team-overview">
       <h2 className="text-xl font-bold mb-2">1. Team Overview</h2>
-      <table className="table-auto w-full border-2 border-black" aria-label="Team member details">
+      <table
+        id="table-team"
+        className="table-auto w-full border-2 border-black"
+        aria-label="Team member details"
+      >
         <caption className="caption-top text-left font-semibold text-gray-600 mb-2">
           Team Member Ratings
         </caption>
@@ -35,9 +40,9 @@ const TestingTable = () => (
     </section>
 
     {/* 2. Table with Presentation Role */}
-    <section>
+    <section id="section-projects">
       <h2 className="text-xl font-bold mb-2">2. Project Assignments</h2>
-      <table className="table-auto w-full border-2 border-black" role="presentation">
+      <table id="table-projects" className="table-auto w-full border-2 border-black" role="presentation">
         <thead className="bg-gray-200">
           <tr>
             <th className="border-2 border-black px-4 py-2">Project</th>
@@ -64,9 +69,9 @@ const TestingTable = () => (
     </section>
 
     {/* 3. Table with ARIA Role */}
-    <section>
+    <section id="section-performance">
       <h2 className="text-xl font-bold mb-2">3. Performance Metrics</h2>
-      <table className="table-auto w-full border-2 border-black" role="grid">
+      <table id="table-performance" className="table-auto w-full border-2 border-black" role="grid">
         <thead className="bg-gray-200">
           <tr>
             <th className="border-2 border-black px-4 py-2">Metric</th>
@@ -86,10 +91,10 @@ const TestingTable = () => (
       </table>
     </section>
 
-    {/* 4. ARIA-only Table (No HTML <table>) */}
-    <section>
+    {/* 4. ARIA-only Table (No <table> tag) */}
+    <section id="section-tasks">
       <h2 className="text-xl font-bold mb-2">4. Task Tracker</h2>
-      <div role="table" className="border-2 border-black grid grid-cols-3">
+      <div id="table-tasks" role="table" className="border-2 border-black grid grid-cols-3">
         <div role="rowgroup" className="contents">
           <div role="row" className="contents bg-gray-200">
             <div role="columnheader" className="border-2 border-black p-2 font-bold">Task</div>
@@ -113,9 +118,9 @@ const TestingTable = () => (
     </section>
 
     {/* 5. Layout Table */}
-    <section>
+    <section id="section-layout">
       <h2 className="text-xl font-bold mb-2">5. Layout Block</h2>
-      <table className="w-full border-2 border-black" role="presentation">
+      <table id="table-layout" className="w-full border-2 border-black" role="presentation">
         <tbody>
           <tr>
             <td className="border-2 border-black p-4">
@@ -131,9 +136,9 @@ const TestingTable = () => (
     </section>
 
     {/* 6. CSS Grid Table */}
-    <section>
+    <section id="section-stock">
       <h2 className="text-xl font-bold mb-2">6. Stock Items</h2>
-      <div className="grid grid-cols-2 border-2 border-gray-400">
+      <div id="table-stock" className="grid grid-cols-2 border-2 border-gray-400">
         <div className="bg-gray-200 font-bold p-2 border">Item</div>
         <div className="bg-gray-200 font-bold p-2 border">Qty</div>
         <div className="p-2 border">Apples</div>
@@ -142,9 +147,10 @@ const TestingTable = () => (
     </section>
 
     {/* 7. Table as Image */}
-    <section>
+    <section id="section-visual">
       <h2 className="text-xl font-bold mb-2">7. Visual Overview</h2>
       <img
+        id="table-visual"
         src="tablesnip.png"
         alt="Graphical summary of tabular data"
         className="border-2 border-black"
