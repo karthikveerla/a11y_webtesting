@@ -5,6 +5,7 @@ import SemanticComplexTable from './pages/SemanticComplexTable';
 import LayoutTable from './pages/LayoutTable';
 import GridTable from './pages/GridTable';
 import TestingTable from './pages/TestingTable';
+import ImageTable from './pages/ImageTable';
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
           <h2 className="text-lg font-bold mb-4">Test Pages</h2>
           <ul className="space-y-3">
             <li><Link className="text-blue-600 hover:underline" to="/semantic-simple">Semantic Simple Table</Link></li>
-            <li><Link className="text-blue-600 hover:underline" to="/semantic-complex">Semantic Complex Table</Link></li>
+            {/* <li><Link className="text-blue-600 hover:underline" to="/semantic-complex">Semantic Complex Table</Link></li> */}
             <li><Link className="text-blue-600 hover:underline" to="/layout-table">Layout Table</Link></li>
-            <li><Link className="text-blue-600 hover:underline" to="/grid-table">Grid Table</Link></li>
+            {/* <li><Link className="text-blue-600 hover:underline" to="/grid-table">Grid Table</Link></li> */}
+            <li><Link className="text-blue-600 hover:underline" to="/image-table">Image Table</Link></li>
             <li><Link className="text-blue-600 hover:underline" to="/testing-table">Test Table</Link></li>
           </ul>
         </nav>
@@ -29,9 +31,10 @@ function App() {
           <Routes>
 
             <Route path="/semantic-simple" element={<SemanticSimpleTable />} />
-            <Route path="/semantic-complex" element={<SemanticComplexTable />} />
+            {/* <Route path="/semantic-complex" element={<SemanticComplexTable />} /> */}
             <Route path="/layout-table" element={<LayoutTable />} />
-            <Route path="/grid-table" element={<GridTable />} />
+            {/* <Route path="/grid-table" element={<GridTable />} /> */}
+            <Route path="/image-table" element={<ImageTable />} />
             <Route path="/testing-table" element={<TestingTable />} />
           </Routes>
         </main>
