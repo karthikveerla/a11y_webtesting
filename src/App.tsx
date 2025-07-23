@@ -6,6 +6,7 @@ import LayoutTable from './pages/LayoutTable';
 import GridTable from './pages/GridTable';
 import TestingTable from './pages/TestingTable';
 import ImageTable from './pages/ImageTable';
+import HeaderAssociationTestTable from './pages/HeaderAssociationTestTable';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             {/* <li><Link className="text-blue-600 hover:underline" to="/grid-table">Grid Table</Link></li> */}
             <li><Link className="text-blue-600 hover:underline" to="/image-table">Image Table</Link></li>
             <li><Link className="text-blue-600 hover:underline" to="/testing-table">Test Table</Link></li>
+            <li><Link className="text-blue-600 hover:underline" to="/header-association-test">Header Association Test</Link></li>
           </ul>
         </nav>
 
@@ -36,6 +38,7 @@ function App() {
             {/* <Route path="/grid-table" element={<GridTable />} /> */}
             <Route path="/image-table" element={<ImageTable />} />
             <Route path="/testing-table" element={<TestingTable />} />
+            <Route path="/header-association-test" element={<HeaderAssociationTestTable />} />
           </Routes>
         </main>
       </div>
