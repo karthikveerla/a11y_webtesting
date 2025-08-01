@@ -147,7 +147,7 @@ const TestingTable = () => (
     </section>
 
     {/* 7. Table as Image */}
-    <section id="section-visual">
+    {/* <section id="section-visual">
       <h2 className="text-xl font-bold mb-2">7. Visual Overview</h2>
       <img
         id="table-visual"
@@ -155,7 +155,7 @@ const TestingTable = () => (
         alt="Graphical summary of tabular data"
         className="border-2 border-black"
       />
-    </section>
+    </section> */}
   </div>
 );
 
