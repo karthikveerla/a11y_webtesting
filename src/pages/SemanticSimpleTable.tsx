@@ -12,7 +12,7 @@ const SemanticSimpleTable = () => (
     {/* PASS: Semantic Simple Table - Caption mismatch */}
     <div className="bg-white rounded-xl shadow-md p-6 border border-gray-300">
       <h1 className="text-2xl font-bold mb-4">Semantic Simple Table</h1>
-      <table id="performanceTable" className="table-auto border-2 border-black w-full" aria-label="Employee performance table">
+      <table id="tbl-semantic-caption-mismatch" className="table-auto border-2 border-black w-full" aria-label="Employee performance table">
         <caption className="caption-top text-left text-gray-700 font-semibold mb-2">Product Sales</caption>
         <thead className="bg-gray-200">
           <tr>
@@ -45,7 +45,7 @@ const SemanticSimpleTable = () => (
     {/* FAIL: Table with no caption */}
     <div className="bg-white rounded-xl shadow-md p-6 border border-gray-300">
       <h2 className="text-xl font-semibold mb-4">Project Status Table</h2>
-      <table id="projectTable" className="table-auto border-2 border-black w-full" aria-label="Project status tracking table">
+      <table id="tbl-no-caption" className="table-auto border-2 border-black w-full" aria-label="Project status tracking table">
         <thead className="bg-gray-200">
           <tr>
             <th className="border-2 border-black px-4 py-2">Project</th>
@@ -77,7 +77,7 @@ const SemanticSimpleTable = () => (
     {/* PASS: HTML table tags with no role */}
     <section>
       <h2 className="text-xl font-bold mb-2">Team Overview</h2>
-      <table className="table-auto w-full border-2 border-black" aria-label="Team member details">
+      <table id="tbl-no-role" className="table-auto w-full border-2 border-black" aria-label="Team member details">
         <caption className="caption-top text-left font-semibold text-gray-600 mb-2">Team Member Ratings</caption>
         <thead className="bg-gray-200">
           <tr>
@@ -95,7 +95,7 @@ const SemanticSimpleTable = () => (
           <tr>
             <td className="border-2 border-black px-4 py-2">Bob</td>
             <td className="border-2 border-black px-4 py-2">7</td>
-            <td className="border-2 border-black px-4 py-2">Good, but needs improvement</td>
+            <td className="border-2 border-black px-4 py-2">Good, but need improvement</td>
           </tr>
           <tr>
             <td className="border-2 border-black px-4 py-2">Charlie</td>
@@ -112,7 +112,7 @@ const SemanticSimpleTable = () => (
     {/* FAIL: Presentation role misuse */}
     <section>
       <h2 className="text-xl font-bold mb-2">Project Assignments</h2>
-      <table className="table-auto w-full border-2 border-black" role="presentation">
+      <table id="tbl-role-presentation" className="table-auto w-full border-2 border-black" role="presentation">
         <thead className="bg-gray-200">
           <tr>
             <th className="border-2 border-black px-4 py-2">Project</th>
@@ -144,7 +144,7 @@ const SemanticSimpleTable = () => (
     {/* FAIL: ARIA role misuse */}
     <section>
       <h2 className="text-xl font-bold mb-2">Performance Metrics</h2>
-      <table className="table-auto w-full border-2 border-black" role="grid">
+      <table id="tbl-role-grid" className="table-auto w-full border-2 border-black" role="grid">
         <thead className="bg-gray-200">
           <tr>
             <th className="border-2 border-black px-4 py-2">Metric</th>
@@ -170,7 +170,7 @@ const SemanticSimpleTable = () => (
     {/* PASS: ARIA-based data table */}
     <section>
       <h2 className="text-xl font-bold mb-4">ARIA-Based Data Table</h2>
-      <div role="table" className="border-2 border-black grid grid-cols-3 w-full" aria-label="Project milestone progress">
+      <div id="tbl-aria-only" role="table" className="border-2 border-black grid grid-cols-3 w-full" aria-label="Project milestone progress">
         <div role="rowgroup" className="contents">
           <div role="row" className="contents bg-gray-200 font-bold">
             <div role="columnheader" className="border-2 border-black p-2">Milestone</div>
@@ -197,7 +197,7 @@ const SemanticSimpleTable = () => (
       This purely visual table is created with CSS grid and has no semantic HTML or ARIA roles. Assistive technologies will not recognize it as a table.
     </p>
     {/* FAIL: Visual table (no ARIA, no semantics) */}
-    <section>
+    <section id = "tbl-visual-no-semantics">
       <h2 className="text-xl font-bold mb-4">Visual Table (No ARIA, No Semantics)</h2>
       <div className="grid grid-cols-3 border-2 border-red-600 w-full">
         <div className="p-2 font-bold border border-gray-400 bg-gray-200">Task</div>
@@ -216,7 +216,7 @@ const SemanticSimpleTable = () => (
       In this final example, the table is presented only as an image or as a CSS background image, both of which remove all structural and semantic information from assistive technologies.
     </p>
     {/* FAIL: Table as image */}
-    <div className="bg-white rounded-xl shadow-md p-6 border border-gray-300">
+    <div id="tbl-image-only" className="bg-white rounded-xl shadow-md p-6 border border-gray-300">
       <h2 className="text-xl font-bold mb-4">FAIL: Table as Image</h2>
       <figure>
         <img src="/tablesnip.png" alt="Quarterly sales table screenshot" width={640} height={360} loading="lazy" className="border max-w-full" />
@@ -227,7 +227,7 @@ const SemanticSimpleTable = () => (
     {/* FAIL: Table as CSS background image */}
     <div className="bg-white rounded-xl shadow-md p-6 border border-gray-300">
       <h2 className="text-xl font-bold mb-4">FAIL: Table as CSS Background Image</h2>
-      <div aria-label="Background image showing a table" style={{ width: 640, height: 360, backgroundImage: "url('/tablesnip.png')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center" }} className="border" />
+      <div id = "tbl-css-bg" aria-label="Background image showing a table" style={{ width: 640, height: 360, backgroundImage: "url('/tablesnip.png')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center" }} className="border" />
       <p className="text-sm text-slate-600 mt-1">Background image of a table (no HTML table semantics)</p>
     </div>
   </div>
