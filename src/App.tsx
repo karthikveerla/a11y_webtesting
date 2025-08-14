@@ -4,6 +4,7 @@ import SemanticSimpleTable from './pages/SemanticSimpleTable';
 import SemanticComplexTable from './pages/SemanticComplexTable';
 import LayoutTable from './pages/LayoutTable';
 import GridTable from './pages/GridTable';
+import TableRole1 from './pages/TableRole1';
 import TestingTable from './pages/TestingTable';
 import ImageTable from './pages/ImageTable';
 import HeaderAssociationTestTable from './pages/HeaderAssociationTestTable';
@@ -26,6 +27,7 @@ function App() {
             <li><Link className="text-blue-600 hover:underline" to="/image-table">Image Table</Link></li>
             <li><Link className="text-blue-600 hover:underline" to="/testing-table">Test Table</Link></li>
             <li><Link className="text-blue-600 hover:underline" to="/header-association-test">Header Association Test</Link></li>
+            <li><Link className="text-blue-600 hover:underline" to="/table-role1">TableRole1</Link></li>
           </ul>
         </nav>
 
@@ -39,6 +41,7 @@ function App() {
             <Route path="/image-table" element={<ImageTable />} />
             <Route path="/testing-table" element={<TestingTable />} />
             <Route path="/header-association-test" element={<HeaderAssociationTestTable />} />
+            <Route path="/table-role1" element={<TableRole1/>}/>
           </Routes>
         </main>
       </div>
