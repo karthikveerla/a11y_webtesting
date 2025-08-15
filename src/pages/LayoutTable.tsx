@@ -21,7 +21,7 @@ const LayoutTable = () => {
             This table is used to align form elements and should be considered a layout table. It is crucial to use `role="presentation"` to strip its semantic meaning.
           </p>
           <form className="max-w-sm mx-auto">
-            <table id="login-form-layout" role="presentation" className="w-full">
+            <table id="login-form-layout" className="w-full">
               <tbody>
                 <tr className="h-16">
                   <td className="w-1/3 p-2 text-right font-semibold">Username:</td>
