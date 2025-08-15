@@ -102,9 +102,9 @@ const LayoutTable = () => {
 
         {/* Scenario 4: layout table without any tags or roles*/}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold mb-6">Layout table without any tags or roles`</h2>
+          <h2 className="text-2xl font-bold mb-6">personal details</h2>
           <p className="text-gray-600 mb-6">
-            This table is built with `div` and `span` elements.
+            This table is built with `div` and `span` elements.<br/>Layout table without any tags or roles
           </p>
           <div id="aria-layout-fail"  aria-label="ARIA-based non-native table" className="w-full max-w-lg mx-auto border border-gray-300">
             <div role="row" className="flex">
