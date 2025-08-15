@@ -14,11 +14,11 @@ const LayoutTable = () => {
 
       <main className="space-y-8">
 
-        {/* Scenario 1: A Login Form Layout Table */}
+        {/* Scenario 1: A Login Form Layout Table with role="grid" */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold mb-6">Login Form Layout</h2>
           <p className="text-gray-600 mb-6">
-            This table is used to align form elements and should be considered a layout table. It is crucial to use `role="presentation"` to strip its semantic meaning.
+            This table is used to align form elements and should be considered a layout table. without role=presenattion attribute
           </p>
           <form className="max-w-sm mx-auto">
             <table id="login-form-layout" className="w-full">
@@ -46,13 +46,14 @@ const LayoutTable = () => {
           </form>
         </div>
 
-        {/* Scenario 2: A Three-Column Content Layout Table */}
+        {/* Scenario 2: A Three-Column Content Layout Table with role="grid" */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold mb-6">Three-Column Content Layout</h2>
           <p className="text-gray-600 mb-6">
+            Proper table tags and role = grid<br/>
             This table is used to create a multi-column layout for visual purposes. It has no meaningful data relationships and should be correctly identified as a layout table.
           </p>
-          <table id="content-columns-layout" role="presentation" className="w-full table-fixed">
+          <table id="content-columns-layout" role="grid" className="w-full table-fixed">
             <tbody>
               <tr>
                 <td className="p-4 align-top">
@@ -76,6 +77,45 @@ const LayoutTable = () => {
               </tr>
             </tbody>
           </table>
+        </div>
+        
+        {/* Scenario 3: A Simple Two-Column Layout Table with role="table" */}
+        <div className="space-y-4">
+          <h2 className="text-2xl font-bold mb-6">Simple Two-Column Layout</h2>
+          <p className="text-gray-600 mb-6">
+            This table is used for a simple key-value layout. When using `role="table"`, an AI should identify its semantic structure, even though it is being used for layout.
+            <br/>table Tags with role = table
+          </p>
+          <table id="simple-table-layout" role="table" className="w-full max-w-lg mx-auto">
+            <tbody>
+              <tr>
+                <td className="w-1/2 p-4 font-semibold border-b border-gray-300">Name:</td>
+                <td className="w-1/2 p-4 border-b border-gray-300">John Doe</td>
+              </tr>
+              <tr>
+                <td className="w-1/2 p-4 font-semibold">Email:</td>
+                <td className="w-1/2 p-4">john.doe@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/* Scenario 4: layout table without any tags or roles*/}
+        <div className="space-y-4">
+          <h2 className="text-2xl font-bold mb-6">Layout table without any tags or roles`</h2>
+          <p className="text-gray-600 mb-6">
+            This table is built with `div` and `span` elements.
+          </p>
+          <div id="aria-layout-fail"  aria-label="ARIA-based non-native table" className="w-full max-w-lg mx-auto border border-gray-300">
+            <div role="row" className="flex">
+              <span role="columnheader" className="w-1/2 p-4 font-semibold border-b border-r border-gray-300">Name:</span>
+              <span role="cell" className="w-1/2 p-4 border-b border-gray-300">John Doe</span>
+            </div>
+            <div role="row" className="flex">
+              <span role="columnheader" className="w-1/2 p-4 font-semibold border-r border-gray-300">Email:</span>
+              <span role="cell" className="w-1/2 p-4">john.doe@example.com</span>
+            </div>
+          </div>
         </div>
         
       </main>
