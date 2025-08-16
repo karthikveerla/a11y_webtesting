@@ -21,7 +21,7 @@ function App() {
         <nav className="w-64 border-r p-6 shadow-md">
           <h2 className="text-lg font-bold mb-4">Test Pages</h2>
           <ul className="space-y-3">
-            <li><Link className="text-blue-600 hover:underline" to="/semantic-simple">Semantic Simple Table</Link></li>
+            {/* <li><Link className="text-blue-600 hover:underline" to="/semantic-simple">Semantic Simple Table</Link></li> */}
             {/* <li><Link className="text-blue-600 hover:underline" to="/semantic-complex">Semantic Complex Table</Link></li> */}
             <li><Link className="text-blue-600 hover:underline" to="/layout-table">Layout Table</Link></li>
             {/* <li><Link className="text-blue-600 hover:underline" to="/grid-table">Grid Table</Link></li> */}
@@ -37,7 +37,7 @@ function App() {
         <main className="flex-grow p-8">
           <Routes>
 
-            <Route path="/semantic-simple" element={<SemanticSimpleTable />} />
+            {/* <Route path="/semantic-simple" element={<SemanticSimpleTable />} /> */}
             {/* <Route path="/semantic-complex" element={<SemanticComplexTable />} /> */}
             <Route path="/layout-table" element={<LayoutTable />} />
             {/* <Route path="/grid-table" element={<GridTable />} /> */}
