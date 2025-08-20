@@ -29,12 +29,13 @@ const HeaderAssociationTestTable = () => {
           <tr>
             <td headers="hdr-region" className="border px-4 py-2">South</td>
             <td headers="hdr-region hdr-q1" className="border px-4 py-2">$8K</td>
-            <td headers="hdr-region hdr-q2" className="border px-4 py-2">$9K</td>
+            <td headers="hdr-region hdr-q1" className="border px-4 py-2">$9K</td>
             <td headers="hdr-region hdr-total" className="border px-4 py-2">$17K</td>
           </tr>
         </tbody>
       </table>
-        <section id="section-multiple-header-fail">
+
+      <section id="section-multiple-header-fail">
   <h2 className="text-xl font-bold mb-2">Broken Header Association</h2>
   <table id="table-multiple-headers-fail" className="table-auto w-full border border-red-600">
     <thead className="bg-gray-200">
@@ -53,7 +54,7 @@ const HeaderAssociationTestTable = () => {
       </tr>
     </tbody>
   </table>
-</section>
+      </section>
 
 
       {/* 2. Low contrast header text */}
