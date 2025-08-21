@@ -8,34 +8,47 @@ const KeyboardNav = () => (
         This is a fully accessible grid table with interactive elements in each row. Keyboard navigation and reverse navigation using <code>Tab</code> and <code>Shift+Tab</code> work as expected.
       </p>
       <div
-        role="table"
-        id="accessible-grid-table"
-        aria-label="Employee actions table"
-        className="border border-black w-full grid grid-cols-5"
+        role="grid"
+        aria-label="Accessible Employee Grid Table"
+        id="keyboard-nav-correct-grid"
+        className="border border-black w-full"
       >
-        <div role="rowgroup" className="contents">
-          <div role="row" className="contents font-bold bg-gray-100">
-            <div role="columnheader" className="border border-black p-2">Name</div>
-            <div role="columnheader" className="border border-black p-2">Email</div>
-            <div role="columnheader" className="border border-black p-2">View</div>
-            <div role="columnheader" className="border border-black p-2">Edit</div>
-            <div role="columnheader" className="border border-black p-2">Delete</div>
+        {/* Header row */}
+        <div role="row" className="flex bg-gray-100 font-bold">
+          <div role="columnheader" className="border border-black p-2 w-1/5">Name</div>
+          <div role="columnheader" className="border border-black p-2 w-1/5">Email</div>
+          <div role="columnheader" className="border border-black p-2 w-1/5">View</div>
+          <div role="columnheader" className="border border-black p-2 w-1/5">Edit</div>
+          <div role="columnheader" className="border border-black p-2 w-1/5">Delete</div>
+        </div>
+
+        {/* Row 1 */}
+        <div role="row" className="flex">
+          <div role="gridcell" className="border border-black p-2 w-1/5">Alice</div>
+          <div role="gridcell" className="border border-black p-2 w-1/5">alice@example.com</div>
+          <div role="gridcell" className="border border-black p-2 w-1/5">
+            <button tabIndex={0} className="underline">View</button>
+          </div>
+          <div role="gridcell" className="border border-black p-2 w-1/5">
+            <a href="#" tabIndex={0} className="text-blue-600">Edit</a>
+          </div>
+          <div role="gridcell" className="border border-black p-2 w-1/5">
+            <button tabIndex={0} className="text-red-600">Delete</button>
           </div>
         </div>
-        <div role="rowgroup" className="contents">
-          <div role="row" className="contents">
-            <div role="cell" className="border border-black p-2">Alice</div>
-            <div role="cell" className="border border-black p-2">alice@example.com</div>
-            <div role="cell" className="border border-black p-2"><button className="underline">View</button></div>
-            <div role="cell" className="border border-black p-2"><a href="#" className="text-blue-600">Edit</a></div>
-            <div role="cell" className="border border-black p-2"><button className="text-red-600">Delete</button></div>
+
+        {/* Row 2 */}
+        <div role="row" className="flex">
+          <div role="gridcell" className="border border-black p-2 w-1/5">Bob</div>
+          <div role="gridcell" className="border border-black p-2 w-1/5">bob@example.com</div>
+          <div role="gridcell" className="border border-black p-2 w-1/5">
+            <button tabIndex={0}>View</button>
           </div>
-          <div role="row" className="contents">
-            <div role="cell" className="border border-black p-2">Bob</div>
-            <div role="cell" className="border border-black p-2">bob@example.com</div>
-            <div role="cell" className="border border-black p-2"><button>View</button></div>
-            <div role="cell" className="border border-black p-2"><a href="#">Edit</a></div>
-            <div role="cell" className="border border-black p-2"><button>Delete</button></div>
+          <div role="gridcell" className="border border-black p-2 w-1/5">
+            <a href="#" tabIndex={0}>Edit</a>
+          </div>
+          <div role="gridcell" className="border border-black p-2 w-1/5">
+            <button tabIndex={0}>Delete</button>
           </div>
         </div>
       </div>
