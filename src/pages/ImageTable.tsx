@@ -7,14 +7,14 @@
 
 import React from "react";
 
-// Small helpers to keep data compact
-const headers = ["Q1", "Q2", "Q3"];
-const rows = [
-  ["Alpha", 120, 98, 143],
-  ["Beta", 88, 110, 121],
-  ["Gamma", 101, 99, 130],
-  ["Delta", 77, 95, 118],
-];
+// // Small helpers to keep data compact
+// const headers = ["Q1", "Q2", "Q3"];
+// const rows = [
+//   ["Alpha", 120, 98, 143],
+//   ["Beta", 88, 110, 121],
+//   ["Gamma", 101, 99, 130],
+//   ["Delta", 77, 95, 118],
+// ];
 
 function Paragraph({ children }: { children: React.ReactNode }) {
   return (

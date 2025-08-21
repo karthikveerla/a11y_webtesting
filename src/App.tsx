@@ -1,9 +1,9 @@
 import { Routes, Route, Link } from 'react-router-dom';
 
-import SemanticSimpleTable from './pages/SemanticSimpleTable';
-import SemanticComplexTable from './pages/SemanticComplexTable';
+// import SemanticSimpleTable from './pages/SemanticSimpleTable';
+// import SemanticComplexTable from './pages/SemanticComplexTable';
 import LayoutTable from './pages/LayoutTable';
-import GridTable from './pages/GridTable';
+// import GridTable from './pages/GridTable';
 import TableRole1 from './pages/TableRole1';
 import TestingTable from './pages/TestingTable';
 import ImageTable from './pages/ImageTable';

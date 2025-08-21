@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 const SemanticSimpleTable = () => (
   <div className="space-y-8 p-6">
