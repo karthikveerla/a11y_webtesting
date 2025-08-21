@@ -9,6 +9,7 @@ import TestingTable from './pages/TestingTable';
 import ImageTable from './pages/ImageTable';
 import HeaderAssociationTestTable from './pages/HeaderAssociationTestTable';
 import CaptionTest from './pages/CaptionTest';
+import KeyboardNav from './pages/KeyboardNav';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
             <li><Link className="text-blue-600 hover:underline" to="/header-association-test">Header Association Test</Link></li>
             <li><Link className="text-blue-600 hover:underline" to="/table-role1">TableRole1</Link></li>
             <li><Link className="text-blue-600 hover:underline" to="/caption-test">CaptionTest</Link></li>
-
+            <li><Link className="text-blue-600 hover:underline" to="/keyboard-nav">KeyboardNav</Link></li>
           </ul>
         </nav>
 
@@ -46,6 +47,7 @@ function App() {
             <Route path="/header-association-test" element={<HeaderAssociationTestTable />} />
             <Route path="/table-role1" element={<TableRole1/>}/>
             <Route path="/caption-test" element={<CaptionTest/>}/>
+            <Route path="/keyboard-nav" element={<KeyboardNav/>}/>
           </Routes>
         </main>
       </div>
